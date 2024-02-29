@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css1</title>
+    <base href="/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="Css1.styles.css" rel="stylesheet" />
+
+
+    <!--<link rel="stylesheet" href="css/loading1.css" />-->
+</head>
+
+<body>
+
+    <!--<div class="multicolor-dots-loader">
+        <div class="layer red">
+            <div class="dots"></div>
+        </div>
+        <div class="layer orange">
+            <div class="dots"></div>
+        </div>
+        <div class="layer yellow">
+            <div class="dots"></div>
+        </div>
+        <div class="layer green">
+            <div class="dots"></div>
+        </div>
+        <div class="layer blue">
+            <div class="dots"></div>
+        </div>
+    </div>-->
+
+
+    <div id="app">
+        
+        
+        <div class="multicolor-dots-loader">
+            <svg class="loading-progress">
+                <div class="layer red">
+                    <div class="dots"></div>
+                </div>
+                <div class="layer orange">
+                    <div class="dots"></div>
+                </div>
+                <div class="layer yellow">
+                    <div class="dots"></div>
+                </div>
+                <div class="layer green">
+                    <div class="dots"></div>
+                </div>
+                <div class="layer blue">
+                    <div class="dots"></div>
+                </div>
+                <div class="loading-progress-text"></div>
+            </svg>
+        </div>
+        
+        
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+</body>
+
+</html>
