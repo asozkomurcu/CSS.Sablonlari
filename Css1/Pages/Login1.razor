@@ -1,0 +1,52 @@
+﻿@page "/login1"
+@layout EmptyLayout
+
+
+<head>
+    <link rel="stylesheet" href="css/LoginPage1.css">
+
+    <style>
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url(Images/login-background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form>
+            <h1>CSS Şablonları</h1>
+            @* <EditForm Model="@userLoginRequest" OnValidSubmit="loginProcess">
+                <DataAnnotationsValidator /> *@
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input @* @bind-value="userLoginRequest.Email" *@ type="email" required />
+                    <label for="">E-Mail Address</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input @* @bind-value="userLoginRequest.Password" *@ type="password" required />
+                    <label for="">Password</label>
+                </div>
+                <div class="forget">
+                    @* <label for="">
+                    <input type="checkbox" />Remember
+                    </label> *@
+                    <a href="#">I forgot my password</a>
+                </div>
+                <button>Login</button>
+                <div class="register">
+                    <p>I don't have an account <a href="/users/register">Register</a></p>
+                </div>
+            @* </EditForm> *@
+        </form>
+    </section>
+
+</body>

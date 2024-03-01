@@ -1,0 +1,64 @@
+﻿@page "/register1"
+@layout EmptyLayout
+
+<head>
+    <link rel="stylesheet" href="css/LoginPage1.css">
+
+    <style>
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url(Images/login-background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<section>
+    <form>
+        <h1>CSS Şablonları</h1>
+        @* <EditForm Model="@userModel" OnValidSubmit="editOrUpdate">
+            <DataAnnotationsValidator /> *@
+            <div class="inputbox">
+                <ion-icon name="person"></ion-icon>
+                <input @* @bind-value="userModel.FirstName" *@ type="text" required />
+                <label for="">First Name</label>
+            </div>
+            @* <ValidationMessage For="@(()=>userModel.FirstName)" class="validation-error" /> *@
+            <div class="inputbox">
+                <ion-icon name="person"></ion-icon>
+                <input @* @bind-value="userModel.LastName" *@ type="text" required />
+                <label for="">Last Name</label>
+                @* <ValidationMessage For="@(()=>userModel.LastName)" class="validation-error" /> *@
+            </div>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input @* @bind-value="userModel.Email" *@ type="email" required />
+                <label for="">E-Mail Address</label>
+                @* <ValidationMessage For="@(()=>userModel.Email)" class="validation-error" /> *@
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input @* @bind-value="userModel.Password" *@ type="password" required />
+                <label for="">Password</label>
+                @* <ValidationMessage For="@(()=>userModel.Password)" class="validation-error" /> *@
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input @* @bind-value="@userModel.PasswordAgain" *@ type="password" required />
+                <label for="">Password Again</label>
+                @* <ValidationMessage For="@(() => userModel.PasswordAgain)" class="validation-error" /> *@
+            </div>
+
+
+            <button>Sing Up</button>
+
+
+        @* </EditForm> *@
+        <a href="login"> <button>Exit</button></a>
+    </form>
+</section>
