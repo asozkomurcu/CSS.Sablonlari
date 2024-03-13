@@ -1,0 +1,127 @@
+﻿.wrapper {
+    width:250px;
+    height:250px;
+    background:#2c2d32;
+    border:#1d1e22 4px solid;
+    border-radius:50%;
+    z-index:0;
+    overflow:hidden;
+    position:relative;
+}
+
+.gear {
+    position:absolute;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    --color:#c44646;
+    --border:#e86060;
+    background:var(--color);
+    border:var(--border) 20px solid;
+    animation:anim-1 5s linear 0s infinite;
+}
+
+.gear:first-child{
+    top:28px;
+    left:29px;
+}
+
+.gear:nth-child(2){
+    top:94px;
+    left:130px;
+    --color:#3a8dda;
+    --border:#5facf3;
+}
+
+.gear:nth-child(3){
+    top:135px;
+    left:32px;
+    --color:#d8be7d;
+    --border:#f4e1b3;
+    transform:rotate(65deg);
+    animation-name:anim-2;
+}
+
+.gear::before {
+    position:absolute;
+    content:'';
+    background: #2c2d32;
+    width:50px;
+    height:50px;
+    border:var(--color) solid 14px;
+    border-radius:50%;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+}
+
+ul {
+    position:absolute;
+    top:-40px;
+    left:18px;
+    list-style:none;
+    z-index:-1;
+}
+
+li{
+    width: 25px;
+    height: 0px;
+    border-bottom: 60px solid var(--border);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    transform-origin: center bottom;
+
+}
+
+li:nth-child(0){
+    transform:rotate(0deg);
+}
+
+li:nth-child(1){
+    transform:rotate(45deg);
+}
+
+li:nth-child(2){
+    transform:rotate(90deg);
+}
+
+li:nth-child(3){
+    transform:rotate(135deg);
+}
+
+    li:nth-child(4) {
+        transform: rotate(180deg);
+    }
+
+    li:nth-child(5) {
+        transform: rotate(225deg);
+    }
+
+    li:nth-child(6) {
+        transform: rotate(270deg);
+    }
+
+    li:nth-child(7) {
+        transform: rotate(315deg);
+    }
+
+    @keyframes anim-1 {
+        100% {
+            transform: rotate(360deg);
+        }
+        0% {
+            transform:rotate(0deg);
+        }
+    }
+
+    @keyframes anim-2 {
+        100%{
+            transform:rotate(-295deg);
+        }
+
+        0%{
+            transform:rotate(65deg);
+        }
+    }
